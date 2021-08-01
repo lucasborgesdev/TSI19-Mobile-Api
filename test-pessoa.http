@@ -1,0 +1,35 @@
+### BUSCAR DADOS DE TODAS AS PESSOAS
+
+GET http://127.0.0.1:8080/pessoa HTTP/1.1
+
+### BUSCAR DADOS DE UMA PESSOA POR ID
+
+GET http://127.0.0.1:8080/pessoa/5 HTTP/1.1
+
+### ADICIONAR NOVA PESSOA
+
+POST http://127.0.0.1:8080/pessoa HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Lucas ",
+    "sobrenome": "Borges",
+    "telefone": "48 9XXXX XXXX",
+    "email": "lucas_borges@hotmail.com"
+}
+
+### ALTERAR UMA PESSOA PELO ID
+
+PUT http://127.0.0.1:8080/pessoa/1 HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Lucas (ALTERADO)",
+    "sobrenome": "Borges",
+    "telefone": "48 9XXXX XXXX",
+    "email": "lucas_borges@hotmail.com"
+}
+
+### EXCLUIR PESSOA POR ID
+
+DELETE http://127.0.0.1:8080/pessoa/1 HTTP/1.1
